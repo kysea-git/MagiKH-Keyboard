@@ -1,0 +1,118 @@
+================================================================================
+END-USER LICENSE AGREEMENT (EULA)
+MagiKH Keyboard
+================================================================================
+
+Version 1.0
+Last updated: June 7, 2026
+
+IMPORTANT — READ CAREFULLY: This End-User License Agreement ("Agreement") is a
+legal agreement between you (either an individual or a single entity, "You")
+and KY SEA ("Licensor") for the MagiKH Keyboard software, comprising
+the input method editor library (KhmerIME.dll), its installer, and any
+accompanying files and documentation (collectively, the "Software").
+
+BY INSTALLING, COPYING, OR OTHERWISE USING THE SOFTWARE, YOU AGREE TO BE BOUND
+BY THE TERMS OF THIS AGREEMENT. IF YOU DO NOT AGREE, DO NOT INSTALL OR USE THE
+SOFTWARE.
+
+--------------------------------------------------------------------------------
+1. LICENSE GRANT
+--------------------------------------------------------------------------------
+Subject to your compliance with this Agreement, Licensor grants You a
+worldwide, royalty-free, non-exclusive, non-transferable license to:
+
+  (a) install and use the Software on any number of devices that You own or
+      control, for personal or commercial purposes, free of charge; and
+
+  (b) redistribute the Software, ONLY in its complete, unmodified installer
+      form and free of any charge, provided that all copyright notices, this
+      Agreement, and the THIRD-PARTY-NOTICES.txt file are retained intact.
+
+--------------------------------------------------------------------------------
+2. RESTRICTIONS
+--------------------------------------------------------------------------------
+Except to the extent expressly permitted by this Agreement or by applicable law
+notwithstanding this limitation, You may NOT:
+
+  (a) sell, rent, lease, sublicense, or charge any fee for the Software;
+
+  (b) modify, adapt, translate, or create derivative works of the Software;
+
+  (c) reverse engineer, decompile, or disassemble the Software, or otherwise
+      attempt to derive its source code, except to the limited extent that
+      applicable law expressly permits this notwithstanding this restriction
+      (e.g., for interoperability where such right cannot be excluded);
+
+  (d) remove, alter, or obscure any proprietary notices, labels, or the
+      THIRD-PARTY-NOTICES.txt file; or
+
+  (e) extract, separate, or reuse any embedded data (including the bundled
+      word-list data) for any purpose other than the normal operation of the
+      Software, except where such data is independently available to You under
+      its own license terms.
+
+--------------------------------------------------------------------------------
+3. OWNERSHIP
+--------------------------------------------------------------------------------
+The Software is licensed, not sold. Licensor retains all right, title, and
+interest in and to the Software, including all intellectual property rights.
+This Agreement does not grant You any rights to trademarks, service marks, or
+logos of Licensor.
+
+--------------------------------------------------------------------------------
+4. THIRD-PARTY COMPONENTS
+--------------------------------------------------------------------------------
+The Software includes third-party materials that are licensed under their own
+terms, as set out in the accompanying THIRD-PARTY-NOTICES.txt file. Those terms
+govern your use of the respective third-party materials and, where they
+conflict with this Agreement with respect to those materials, the third-party
+terms prevail for those materials.
+
+--------------------------------------------------------------------------------
+5. NO WARRANTY
+--------------------------------------------------------------------------------
+THE SOFTWARE IS PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTY OF ANY
+KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. YOU
+ASSUME THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE SOFTWARE.
+
+--------------------------------------------------------------------------------
+6. LIMITATION OF LIABILITY
+--------------------------------------------------------------------------------
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL LICENSOR
+BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT, OR CONSEQUENTIAL DAMAGES
+WHATSOEVER (INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF DATA, LOSS OF
+PROFITS, OR BUSINESS INTERRUPTION) ARISING OUT OF THE USE OF OR INABILITY TO
+USE THE SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. WHERE
+LIABILITY CANNOT BE EXCLUDED, IT IS LIMITED TO THE GREATEST EXTENT PERMITTED BY
+LAW.
+
+--------------------------------------------------------------------------------
+7. TERMINATION
+--------------------------------------------------------------------------------
+This Agreement is effective until terminated. It terminates automatically and
+without notice if You breach any of its terms. Upon termination, You must cease
+all use of the Software and destroy all copies in your possession. Sections 3,
+5, 6, 8, and 9 survive termination.
+
+--------------------------------------------------------------------------------
+8. GOVERNING LAW
+--------------------------------------------------------------------------------
+This Agreement is governed by the laws of Cambodia, without regard to its
+conflict-of-laws rules. The courts located in Cambodia shall have
+exclusive jurisdiction over any dispute arising out of or relating to this
+Agreement, to the extent permitted by applicable law.
+
+--------------------------------------------------------------------------------
+9. ENTIRE AGREEMENT
+--------------------------------------------------------------------------------
+This Agreement, together with the THIRD-PARTY-NOTICES.txt file, constitutes the
+entire agreement between You and Licensor regarding the Software and supersedes
+all prior or contemporaneous understandings. If any provision is held
+unenforceable, the remaining provisions remain in full force and effect.
+
+================================================================================
+© 2026 KY SEA. All rights reserved.
+"MagiKH Keyboard" and the MagiKH logo are trademarks of KY SEA.
+================================================================================

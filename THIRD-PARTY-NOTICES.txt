@@ -1,0 +1,99 @@
+================================================================================
+THIRD-PARTY NOTICES
+MagiKH Keyboard
+================================================================================
+
+This product (the "MagiKH Keyboard" input method editor, distributed as
+KhmerIME.dll) incorporates or is derived from third-party materials. The
+required notices and licenses for those materials are reproduced below.
+
+This file is provided to satisfy the attribution requirements of the licenses
+listed herein. The remainder of MagiKH Keyboard is not covered by these
+notices.
+
+================================================================================
+1. SIL Khmer Line-Breaking Dictionary (khmerlbdict)
+================================================================================
+
+Portions of the bundled Khmer word data are derived from the SIL "khmerlbdict"
+project (https://github.com/silnrsi/khmerlbdict), used under the MIT License.
+
+    MIT License
+
+    Copyright (c) 2015 SIL NRSI
+
+    Permission is hereby granted, free of charge, to any person obtaining a
+    copy of this software and associated documentation files (the "Software"),
+    to deal in the Software without restriction, including without limitation
+    the rights to use, copy, modify, merge, publish, distribute, sublicense,
+    and/or sell copies of the Software, and to permit persons to whom the
+    Software is furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+    FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+    DEALINGS IN THE SOFTWARE.
+
+================================================================================
+2. Microsoft Windows Classic Samples — Text Services Framework IME Sample
+================================================================================
+
+The Text Services Framework (TSF) integration of MagiKH Keyboard was developed
+with reference to, and may include portions adapted from, the IME sample in the
+Microsoft "Windows-classic-samples" repository
+(https://github.com/microsoft/Windows-classic-samples), used under the MIT
+License.
+
+    MIT License
+
+    Copyright (c) Microsoft Corporation.
+
+    Permission is hereby granted, free of charge, to any person obtaining a
+    copy of this software and associated documentation files (the "Software"),
+    to deal in the Software without restriction, including without limitation
+    the rights to use, copy, modify, merge, publish, distribute, sublicense,
+    and/or sell copies of the Software, and to permit persons to whom the
+    Software is furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+    FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+    DEALINGS IN THE SOFTWARE.
+
+Use of the Microsoft name is for attribution only and does not imply any
+endorsement, sponsorship, or affiliation.
+
+================================================================================
+3. Khmer Word List Acknowledgements (courtesy credit)
+================================================================================
+
+Portions of the bundled Khmer word data are derived from the publicly released
+"SBBIC Khmer Word List," which its publisher made available for use without
+restriction ("you can download it and use it in any way you would like" —
+https://sbbic.org/2014/04/26/sbbic-khmer-word-list-2). As stated by SBBIC, that
+list is itself a combination of word lists from:
+
+    - SBBIC (Society for Better Books in Cambodia)
+    - KhmerOS (Khmer Software Initiative)
+    - PanCambodia (PAN Localization project)
+
+These projects are gratefully acknowledged. This acknowledgement is provided as
+a courtesy; it does not imply any endorsement or affiliation.
+
+The bundled word data has been modified from all of the above sources.
+
+================================================================================
+End of Third-Party Notices.
+================================================================================
