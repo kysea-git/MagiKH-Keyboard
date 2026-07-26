@@ -1,6 +1,6 @@
 This is a Khmer Input Method Editor (IME) which can assist your Khmer typing experience.
 Verion1.0.0 has been release at
-[https://github.com/kysea-git/MagiKH-Keyboard](https://github.com/kysea-git/MagiKH-Keyboard)
+https://github.com/kysea-git/MagiKH-Keyboard/releases/tag/Khmer_Input_Method_Editor
 
 ### ខ្មែរ
 
@@ -19,8 +19,8 @@ Verion1.0.0 has been release at
 
 **របៀបដំឡើង**
 
-1. ទាញយកMagiKH_Keyboard_Setup.exe, How-to-Install.html (របៀបដំឡើង) និង How-to-Use.html(របៀបប្រើ)
-2. ធ្វើតាម How-to-Install.html (របៀបដំឡើង)
+1. ទាញយកMagiKH_Keyboard_Setup.exe, How-to-Install.html (របៀបដំឡើង) និង How-to-Use.html(របៀបប្រើ) ពី [ទំព័រទាញយក](https://github.com/kysea-git/MagiKH-Keyboard/releases/tag/Khmer_Input_Method_Editor)
+3. ធ្វើតាម How-to-Install.html (របៀបដំឡើង)
 
 ---
 
@@ -41,5 +41,5 @@ In Auto mode:
 
 **Installation**
 
-1. Download MagiKH_Keyboard_Setup.exe, How-to-Install.html and How-to-Use.html
+1. Download MagiKH_Keyboard_Setup.exe, How-to-Install.html and How-to-Use.html from [Download Page](https://github.com/kysea-git/MagiKH-Keyboard/releases/tag/Khmer_Input_Method_Editor)
 2. follow the instructions in How-to-Install.html
