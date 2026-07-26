@@ -1,6 +1,6 @@
 This is a Khmer Input Method Editor (IME) which can assist your Khmer typing experience.
 Verion1.0.0 has been release at
-https://github.com/kysea-git/MagiKH-Keyboard/releases
+[https://github.com/kysea-git/MagiKH-Keyboard](https://github.com/kysea-git/MagiKH-Keyboard)
 
 ### ខ្មែរ
 
