@@ -1,0 +1,458 @@
+﻿<!DOCTYPE html>
+<html lang="km">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MagiKH Keyboard — Khmer Keyboard Layout</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@400;500;600;700&family=Noto+Serif+Khmer:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIiSURBVFhH7VcxS8NAFM6/chIcHIKTk5uTk5tDcHIQNycnBTGC4iAIHYSC4GAVREToIAriInFQBEW0am1t67Pfay55d73EaFtd+sEH7eXlvu/evSTvHCIaanL2vwgD+KGhdNug080K7c6UaW2kREsDT7/i6vAz5afe6GTlne4v6+HsOjQD9SpRcb1Cy4PP1gk75d5cmSqlz1CthcgAxLfGX6w3dpPI6NtDbCIygDTJwNzEK2/D3Zk9dVmAtJ/nqrwNcm78V2ADCJRpP16stK52ERf5qmbiav+Dx9mAXD1W3isczMc6KHCADexMxymC014BmVY6m2MvPMYG8LioC/bHpUCe45DTpFcIhywIfJdjHNenIByTQKErHRBgA+agiYLXEtfpNW0JFDxLTLthU+tbA9GqNLrka0tUGXLJdeM4Vw9imFrpBgKfXKugREB+KGoTNGFqpRrQVp+wr7I+wLQaAUytDDUgBZIzodVJigtTK1MRagWWmIl4K8AkD6ZW38DPDWRkfwv6Bv7ZQPILy9RiA7Ibkv1aDH11tnd+ttd2ggF0QWpQtUo22L+MOtM+SGj3lQ56EIANHC60t0q9AJpcpaMaUzZwfVSLLoA3xRpf7CawernVOH8AbAA/ZOuMQATgpk6Bgwhac9n2bYyWuD0DIgMovl6diEzKDEcGgMegwW257aZuEKcibLeEZkABKduefNXS1gkxF84eKu0SVgN/B6Ivy+wBphWKL+YAAAAASUVORK5CYII=">
+<style>
+  :root {
+    /* Page / UI — lavender */
+    --bg:              #f8f8fb;
+    --accent:          #8b6fd4;
+    --accent-auto:     #7c5cbf;
+    --text:            #2a1f5e;
+    --text-light:      #6b5fa0;
+    --card:            #ffffff;
+    --divider:         #d8d0ef;
+    --header-bg:       #5f2299;
+
+    /* Keyboard widget — original dark */
+    --kbd-bg:          #2c2c2e;
+    --kbd-shadow:      #1a1a1c;
+    --key-face:        #3a3a3c;
+    --key-face-hover:  #48484a;
+    --key-border:      #555557;
+    --key-label:       #aeaeb2;
+    --col-base:        #e8e8e8;
+    --col-shift:       #ffd60a;
+    --col-altgr:       #34c759;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans Khmer", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  /* ── Header ── */
+  header {
+    background: var(--header-bg);
+    color: #ece8ff;
+    padding: 24px 40px 20px;
+    display: flex; align-items: center; gap: 18px;
+    box-shadow: 0 2px 16px rgba(30,18,80,.4);
+  }
+  .logo {
+    width: 46px; height: 46px;
+    border-radius: 11px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.45), 0 3px 10px rgba(0,0,0,0.4);
+  }
+  .logo svg { width: 46px; height: 46px; }
+  header h1 { font-size: 21px; font-weight: 700; }
+  header p  { font-size: 13px; color: #b0a8cc; margin-top: 2px; }
+  .badge {
+    margin-left: auto;
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.14);
+    border-radius: 20px; padding: 4px 14px;
+    font-size: 12px; color: #b0a8cc; white-space: nowrap;
+  }
+
+  /* ── Page nav ── */
+  .page-nav { display: flex; gap: 8px; padding: 18px 40px 0; }
+  .page-nav a {
+    font-size: 13px; font-weight: 600; color: var(--text-light);
+    text-decoration: none; padding: 6px 16px;
+    border-radius: 20px; border: 1px solid var(--divider);
+    background: var(--card); transition: all .15s;
+  }
+  .page-nav a:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .page-nav a.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+  /* ── Tabs ── */
+  .tabs { display: flex; padding: 20px 40px 0; }
+  .tab-btn {
+    border: none; background: transparent; cursor: pointer;
+    padding: 10px 26px; font-size: 14px; font-weight: 600;
+    color: var(--text-light);
+    border-bottom: 3px solid transparent;
+    transition: color .15s, border-color .15s;
+    font-family: "Noto Sans Khmer","Khmer OS",-apple-system,sans-serif;
+  }
+  .tab-btn:hover { color: var(--text); }
+  .tab-btn.active-auto   { color: var(--accent-auto);  border-color: var(--accent-auto);  }
+  .tab-btn.active-manual { color: var(--accent);        border-color: var(--accent);        }
+  .tabs-underline { height: 1px; background: var(--divider); margin: 0 40px; }
+
+  /* ── Keyboard ── */
+  .kbd-wrap { padding: 20px 40px 28px; overflow-x: auto; }
+  .keyboard {
+    background: var(--kbd-bg);
+    border-radius: 16px;
+    padding: 18px 20px 22px;
+    display: inline-block;
+    box-shadow: 0 8px 32px rgba(20,10,60,.5), 0 2px 8px rgba(20,10,60,.3);
+    min-width: 860px;
+  }
+  .row { display: flex; gap: 5px; margin-bottom: 5px; }
+
+  /* ── Key ── */
+  .key {
+    position: relative;
+    background: var(--key-face);
+    border: 1px solid var(--key-border);
+    border-bottom: 3px solid var(--kbd-shadow);
+    border-radius: 6px;
+    height: 62px; min-width: 54px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 4px 5px;
+    cursor: default;
+    transition: background .1s;
+    user-select: none;
+  }
+  .key:hover { background: var(--key-face-hover); }
+
+  .key .c-tl { grid-area:1/1; align-self:start; justify-self:start; }
+  .key .c-tr { grid-area:1/2; align-self:start; justify-self:end;   }
+  .key .c-bl { grid-area:2/1; align-self:end;   justify-self:start; }
+  .key .c-br { grid-area:2/2; align-self:end;   justify-self:end;   }
+
+  .key .c-tl { font-size:9px; color:var(--key-label); opacity:.45; font-family:-apple-system,sans-serif; }
+  .key .c-tr { font-size:15px; line-height:1; color:var(--col-shift);
+               font-family:"Noto Sans Khmer","Khmer OS","Battambang",sans-serif; }
+  .key .c-bl { font-size:18px; line-height:1; color:var(--col-base);
+               font-family:"Noto Sans Khmer","Khmer OS","Battambang",sans-serif; }
+  .key .c-br { font-size:13px; line-height:1; color:var(--col-altgr);
+               font-family:"Noto Sans Khmer","Khmer OS","Battambang",sans-serif; }
+  .key .c-tr:empty, .key .c-br:empty { display:none; }
+
+  /* Wide / special */
+  .key.backspace { min-width:94px; }
+  .key.tab       { min-width:78px; }
+  .key.backslash { min-width:70px; }
+  .key.caps      { min-width:88px; }
+  .key.enter     { min-width:104px; }
+  .key.lshift    { min-width:112px; }
+  .key.rshift    { min-width:120px; }
+  .key.space     { min-width:390px; }
+  .key.fn        { min-width:54px; }
+
+  .key.special { background:#2a2a2c; border-color:#444446; }
+  .key.special .c-bl {
+    grid-column:1/span 2; text-align:center; justify-self:center;
+    font-family:-apple-system,sans-serif; font-size:10.5px; color:var(--key-label);
+  }
+
+  /* J key swap */
+  .j-auto, .j-manual { display:none; }
+  body.mode-auto   .j-auto   { display:inline; }
+  body.mode-manual .j-manual { display:inline; }
+
+  /* Spacebar labels */
+  .key.space .sp-label {
+    grid-column:1/span 2; text-align:center; justify-self:center;
+    font-family:"Noto Sans Khmer","Khmer OS",-apple-system,sans-serif;
+    font-size:10px; color:var(--key-label); line-height:1.4;
+    display:none;
+  }
+  body.mode-auto   .sp-auto   { display:block; }
+  body.mode-manual .sp-manual { display:block; }
+
+  /* Auto mode: hide modifier keys (Shift, Ctrl, Alt, Alt+Ctrl fn keys) */
+  body.mode-auto .auto-hide { display:none; }
+  /* ZXCV row: restore indentation equal to the hidden Shift key (112px) + gap (5px) */
+  body.mode-auto .row-zxcv { padding-left: 117px; }
+  /* Space row: center the spacebar in Auto mode (same size as Manual) */
+  body.mode-auto .row-space { justify-content: center; }
+
+  /* ── Legend (Manual mode only) ── */
+  .legend { display:none; }
+  body.mode-manual .legend {
+    display: flex; gap: 16px; flex-wrap: wrap; align-items: center;
+    padding: 12px 40px 0;
+  }
+  .legend-item { display:flex; align-items:center; gap:5px; font-size:12px; color:var(--text-light); }
+  .dot { width:10px; height:10px; border-radius:2px; }
+
+  /* ── Panels ── */
+  .panel { display:none; }
+  body.mode-auto   .panel-auto   { display:block; }
+  body.mode-manual .panel-manual { display:block; }
+
+  /* ── Info cards ── */
+  .cards {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(290px,1fr));
+    gap:16px; padding:0 40px 20px;
+  }
+  .card {
+    background:var(--card);
+    border:1px solid var(--divider);
+    border-radius:12px; padding:18px 20px;
+  }
+  .card h2 {
+    font-size:13px; font-weight:700; text-transform:uppercase;
+    letter-spacing:.05em; margin-bottom:10px;
+  }
+  .card h2.purple { color:var(--accent-auto); }
+  .card h2.indigo { color:var(--accent); }
+  .card ul { padding-left:16px; }
+  .card li { font-size:13.5px; line-height:1.75; color:var(--text); margin-bottom:2px; }
+  .tag {
+    display:inline-block; border-radius:4px; padding:1px 7px;
+    font-size:12px; font-weight:600; font-family:monospace;
+  }
+  .tag.purple { background:#f0eafb; color:#7c5cbf; }
+  .tag.green  { background:#e6f9ee; color:#1a7f3c; }
+  .tag.yellow { background:#fff8e1; color:#a86800; }
+
+  /* ── Examples ── */
+  .examples-section { padding:0 40px 20px; }
+  .examples-section h2 { font-size:15px; font-weight:700; margin-bottom:14px; color:var(--text); }
+  .examples-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(340px,1fr)); gap:16px; }
+  .ex-card {
+    background:var(--card); border:1px solid var(--divider);
+    border-radius:12px; padding:18px 20px;
+  }
+  .ex-card h3 { font-size:13px; color:var(--text-light); margin-bottom:8px; }
+  .ex-word {
+    font-size:28px; color:var(--accent);
+    font-family:"Noto Serif Khmer","Noto Sans Khmer","Battambang",serif; margin-bottom:12px;
+  }
+  table.ex { width:100%; border-collapse:collapse; font-size:13px; }
+  table.ex th.ex-lbl {
+    padding:6px 12px 6px 0; text-align:left; white-space:nowrap;
+    font-size:11px; text-transform:uppercase; letter-spacing:.05em;
+    color:var(--text-light); border-bottom:1px solid var(--divider);
+  }
+  table.ex td {
+    padding:6px 8px; border-bottom:1px solid var(--divider); text-align:center;
+    font-family:"Noto Sans Khmer","Khmer OS","Battambang",sans-serif; font-size:15px;
+  }
+  table.ex td.k {
+    font-family:"Courier New",monospace; font-size:14px; font-weight:700;
+    color:var(--accent); background:#f0eafb; border-radius:3px;
+  }
+  table.ex tr:last-child td,
+  table.ex tr:last-child th { border-bottom:none; }
+
+  /* ── Footer ── */
+  footer {
+    border-top:1px solid var(--divider); padding:14px 40px;
+    font-size:12px; color:var(--text-light);
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px;
+  }
+</style>
+</head>
+<body class="mode-auto">
+
+<header>
+  <div class="logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46"><rect x="2" y="2" width="42" height="42" rx="6" fill="white" stroke="#9637F0" stroke-width="4"/><text x="23" y="37" font-family="'Khmer OS','Khmer UI',serif" font-size="36" font-weight="900" fill="black" text-anchor="middle">ម</text></svg></div>
+  <div>
+    <h1>MagiKH Keyboard</h1>
+    <p>Type Khmer Like Magic</p>
+  </div>
+  <span class="badge">v1.0 &nbsp;|&nbsp; Windows 10/11 x64</span>
+</header>
+
+<div class="page-nav">
+  <a href="How-to-Install.html">Install &amp; Setup</a>
+  <a href="How-to-Use.html" class="active">Keyboard Layout</a>
+</div>
+
+<div class="tabs">
+  <button class="tab-btn active-auto"  id="tab-auto"   onclick="setMode('auto')">Auto (ស្វ័យប្រវត្តិ)</button>
+  <button class="tab-btn"             id="tab-manual" onclick="setMode('manual')">Manual (ដោយដៃ)</button>
+</div>
+<div class="tabs-underline"></div>
+
+<div class="legend">
+  <div class="legend-item"><span class="dot" style="background:var(--col-base)"></span>ទម្រង់គោល (base)</div>
+  <div class="legend-item"><span class="dot" style="background:var(--col-shift)"></span>Shift (top-right)</div>
+  <div class="legend-item"><span class="dot" style="background:var(--col-altgr)"></span>Alt+Ctrl (bottom-right)</div>
+</div>
+
+<!-- ═══════════════ KEYBOARD ═══════════════ -->
+<div class="kbd-wrap">
+<div class="keyboard">
+
+<!-- Row 0: Number row -->
+<div class="row">
+  <div class="key"><span class="c-tl">`</span><span class="c-tr">»</span><span class="c-bl">«</span><span class="c-br" style="font-size:9px;font-family:sans-serif">ZWJ</span></div>
+  <div class="key"><span class="c-tl">1</span><span class="c-tr">!</span><span class="c-bl">១</span><span class="c-br" style="font-size:9px;font-family:sans-serif">ZWNJ</span></div>
+  <div class="key"><span class="c-tl">2</span><span class="c-tr">ៗ</span><span class="c-bl">២</span><span class="c-br">@</span></div>
+  <div class="key"><span class="c-tl">3</span><span class="c-tr">"</span><span class="c-bl">៣</span><span class="c-br">៑</span></div>
+  <div class="key"><span class="c-tl">4</span><span class="c-tr">៛</span><span class="c-bl">៤</span><span class="c-br">$</span></div>
+  <div class="key"><span class="c-tl">5</span><span class="c-tr">%</span><span class="c-bl">៥</span><span class="c-br">€</span></div>
+  <div class="key"><span class="c-tl">6</span><span class="c-tr">៍</span><span class="c-bl">៦</span><span class="c-br">៙</span></div>
+  <div class="key"><span class="c-tl">7</span><span class="c-tr">័</span><span class="c-bl">៧</span><span class="c-br">៚</span></div>
+  <div class="key"><span class="c-tl">8</span><span class="c-tr">៏</span><span class="c-bl">៨</span><span class="c-br">*</span></div>
+  <div class="key"><span class="c-tl">9</span><span class="c-tr">(</span><span class="c-bl">៩</span><span class="c-br">{</span></div>
+  <div class="key"><span class="c-tl">0</span><span class="c-tr">)</span><span class="c-bl">០</span><span class="c-br">}</span></div>
+  <div class="key"><span class="c-tl">-</span><span class="c-tr">៌</span><span class="c-bl">ឥ</span><span class="c-br">×</span></div>
+  <div class="key"><span class="c-tl">=</span><span class="c-tr">=</span><span class="c-bl">ឲ</span><span class="c-br">៎</span></div>
+  <div class="key special backspace"><span class="c-bl">⌫ Backspace</span></div>
+</div>
+
+<!-- Row 1: QWERTY -->
+<div class="row">
+  <div class="key special tab"><span class="c-bl">Tab ⇥</span></div>
+  <div class="key"><span class="c-tl">Q</span><span class="c-tr">ឈ</span><span class="c-bl">ឆ</span></div>
+  <div class="key"><span class="c-tl">W</span><span class="c-tr">ឺ</span><span class="c-bl">ឹ</span></div>
+  <div class="key"><span class="c-tl">E</span><span class="c-tr">ែ</span><span class="c-bl">េ</span><span class="c-br">ឯ</span></div>
+  <div class="key"><span class="c-tl">R</span><span class="c-tr">ឬ</span><span class="c-bl">រ</span><span class="c-br">ឫ</span></div>
+  <div class="key"><span class="c-tl">T</span><span class="c-tr">ទ</span><span class="c-bl">ត</span><span class="c-br">-</span></div>
+  <div class="key"><span class="c-tl">Y</span><span class="c-tr">ួ</span><span class="c-bl">យ</span></div>
+  <div class="key"><span class="c-tl">U</span><span class="c-tr">ូ</span><span class="c-bl">ុ</span></div>
+  <div class="key"><span class="c-tl">I</span><span class="c-tr">ី</span><span class="c-bl">ិ</span><span class="c-br">ឦ</span></div>
+  <div class="key"><span class="c-tl">O</span><span class="c-tr">ៅ</span><span class="c-bl">ោ</span><span class="c-br">ឱ</span></div>
+  <div class="key"><span class="c-tl">P</span><span class="c-tr">ភ</span><span class="c-bl">ផ</span><span class="c-br">ឰ</span></div>
+  <div class="key"><span class="c-tl">[</span><span class="c-tr">ឿ</span><span class="c-bl">ៀ</span><span class="c-br">ឩ</span></div>
+  <div class="key"><span class="c-tl">]</span><span class="c-tr">ឧ</span><span class="c-bl">ឪ</span><span class="c-br">ឳ</span></div>
+  <div class="key backslash"><span class="c-tl">\</span><span class="c-tr">ឭ</span><span class="c-bl">ឮ</span><span class="c-br">\</span></div>
+</div>
+
+<!-- Row 2: ASDF -->
+<div class="row">
+  <div class="key special caps"><span class="c-bl">Caps Lock</span></div>
+  <div class="key"><span class="c-tl">A</span><span class="c-tr">ាំ</span><span class="c-bl">ា</span></div>
+  <div class="key"><span class="c-tl">S</span><span class="c-tr">ៃ</span><span class="c-bl">ស</span></div>
+  <div class="key"><span class="c-tl">D</span><span class="c-tr">ឌ</span><span class="c-bl">ដ</span></div>
+  <div class="key"><span class="c-tl">F</span><span class="c-tr">ធ</span><span class="c-bl">ថ</span></div>
+  <div class="key"><span class="c-tl">G</span><span class="c-tr">អ</span><span class="c-bl">ង</span></div>
+  <div class="key"><span class="c-tl">H</span><span class="c-tr">ះ</span><span class="c-bl">ហ</span></div>
+  <!-- J: Auto→ញ as base; Manual→្ base / ញ shift -->
+  <div class="key">
+    <span class="c-tl">J</span>
+    <span class="c-tr">ញ</span>
+    <span class="c-bl j-auto"></span>
+    <span class="c-bl j-manual">្</span>
+  </div>
+  <div class="key"><span class="c-tl">K</span><span class="c-tr">គ</span><span class="c-bl">ក</span></div>
+  <div class="key"><span class="c-tl">L</span><span class="c-tr">ឡ</span><span class="c-bl">ល</span></div>
+  <div class="key"><span class="c-tl">;</span><span class="c-tr">ោះ</span><span class="c-bl">ើ</span><span class="c-br">៖</span></div>
+  <div class="key"><span class="c-tl">'</span><span class="c-tr">៉</span><span class="c-bl">់</span><span class="c-br">ៈ</span></div>
+  <div class="key special enter"><span class="c-bl">Enter ↵</span></div>
+</div>
+
+<!-- Row 3: ZXCV — Shift keys hidden in Auto; padding restores indent -->
+<div class="row row-zxcv">
+  <div class="key special lshift auto-hide"><span class="c-bl">⇧ Shift</span></div>
+  <div class="key"><span class="c-tl">Z</span><span class="c-tr">ឍ</span><span class="c-bl">ឋ</span></div>
+  <div class="key"><span class="c-tl">X</span><span class="c-tr">ឃ</span><span class="c-bl">ខ</span></div>
+  <div class="key"><span class="c-tl">C</span><span class="c-tr">ជ</span><span class="c-bl">ច</span></div>
+  <div class="key"><span class="c-tl">V</span><span class="c-tr">េះ</span><span class="c-bl">វ</span></div>
+  <div class="key"><span class="c-tl">B</span><span class="c-tr">ព</span><span class="c-bl">ប</span><span class="c-br">+</span></div>
+  <div class="key"><span class="c-tl">N</span><span class="c-tr">ណ</span><span class="c-bl">ន</span></div>
+  <div class="key"><span class="c-tl">M</span><span class="c-tr">ំ</span><span class="c-bl">ម</span></div>
+  <div class="key"><span class="c-tl">,</span><span class="c-tr">ុះ</span><span class="c-bl">ុំ</span><span class="c-br">,</span></div>
+  <div class="key"><span class="c-tl">.</span><span class="c-tr">៕</span><span class="c-bl">។</span><span class="c-br">.</span></div>
+  <div class="key"><span class="c-tl">/</span><span class="c-tr">?</span><span class="c-bl">៊</span><span class="c-br">/</span></div>
+  <div class="key special rshift auto-hide"><span class="c-bl">⇧ Shift</span></div>
+</div>
+
+<!-- Row 4: Space — Ctrl/Alt/Alt+Ctrl hidden in Auto; spacebar expands to fill -->
+<div class="row row-space">
+  <div class="key special fn auto-hide"><span class="c-bl">Ctrl</span></div>
+  <div class="key special fn auto-hide"><span class="c-bl">Win</span></div>
+  <div class="key special fn auto-hide"><span class="c-bl">Alt</span></div>
+  <div class="key special space">
+    <span class="sp-label sp-auto">Space — ជ្រើសពាក្យ ឬ ដកឃ្លា</span>
+    <span class="sp-label sp-manual">Space: ចន្លោះមិនឃើញ &nbsp;·&nbsp; Shift+Space: ដកឃ្លា</span>
+  </div>
+  <div class="key special fn auto-hide"><span class="c-bl">Alt</span></div>
+  <div class="key special fn auto-hide"><span class="c-bl">Menu</span></div>
+  <div class="key special fn auto-hide"><span class="c-bl">Ctrl</span></div>
+</div>
+
+</div><!-- .keyboard -->
+</div><!-- .kbd-wrap -->
+
+<!-- ═══════════════ AUTO PANEL ═══════════════ -->
+<div class="panel panel-auto">
+  <div class="cards">
+    <div class="card">
+      <h2 class="purple">របៀបវាយ (Auto)</h2>
+      <ul>
+        <li>វាយដោយចុចគ្រាប់ចុចតែប៉ុណ្ណោះ — <strong>មិនចាំបាច់ចុច <span class="tag purple">Shift</span> ឬ <span class="tag purple">Alt+Ctrl</span> </strong></li>
+        <li>មិនចាំបាច់ដាក់ជើង <span class="tag purple">្</span> ព្រោះ <span class="tag purple">្</span>ត្រូវបានដាក់ដោយ <strong>ស្វ័យប្រវត្តិ</strong> </li>
+        <li>ចុច <span class="tag green">Space</span> — កំណត់យកពាក្យកំពុងវាយ</li>
+        <li>ចុច <span class="tag purple">Tab</span> រួចហើយចុច<span class="tag purple">1–9</span> — ជ្រើសរើសពាក្យផ្សេងៗ</li>
+        <li>ចុច <span class="tag yellow">Caps Lock</span> — ប្ដូរទៅ Manual (ដោយដៃ)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="examples-section">
+    <h2>ឧទាហរណ៍ (Auto Mode)</h2>
+    <div class="examples-grid">
+      <div class="ex-card">
+        <div class="ex-word">អក្សរ</div>
+        <table class="ex">
+          <tr>
+            <th class="ex-lbl">ប្រកប</th>
+            <td>អ</td><td>ក</td><td>្ស</td><td>រ</td>
+          </tr>
+          <tr>
+            <th class="ex-lbl">វាយ</th>
+            <td class="k">g</td><td class="k">k</td><td class="k">s</td><td class="k">r</td>
+          </tr>
+        </table>
+      </div>
+      <div class="ex-card">
+        <div class="ex-word">ទូរស័ព្ទ</div>
+        <table class="ex">
+          <tr>
+            <th class="ex-lbl">ប្រកប</th>
+            <td>ទ</td><td>ូ</td><td>រ</td><td>ស</td><td>័</td><td>ព</td><td>្ទ</td>
+          </tr>
+          <tr>
+            <th class="ex-lbl">វាយ</th>
+            <td class="k">t</td><td class="k">u</td><td class="k">r</td><td class="k">s</td><td class="k">7</td><td class="k">b</td><td class="k">t</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div><!-- /panel-auto -->
+
+<!-- ═══════════════ MANUAL PANEL ═══════════════ -->
+<div class="panel panel-manual">
+  <div class="cards">
+    <div class="card">
+      <h2 class="indigo">របៀបវាយ (Manual)</h2>
+      <ul>
+        <li>អក្សរជួរលើ: ចុច <span class="tag purple">Shift</span> ដោយខ្លួនឯង</li>
+        <li>អក្សរក្រោមខាងស្ដាំ: ចុច <span class="tag purple">Alt+Ctrl</span></li>
+        <li>ចុច <span class="tag purple">្</span>ដោយខ្លួនឯង</li>
+        <li><span class="tag purple">Space</span> — ចន្លោះមិនឃើញ (Zero-Width Space)</li>
+        <li><span class="tag purple">Shift+Space</span> — ដកឃ្លា (Normal Space)</li>
+        <li>ចុច <span class="tag yellow">Caps Lock</span> — ប្ដូរទៅ Auto (ស្វ័យប្រវត្តិ)</li>
+      </ul>
+    </div>
+  </div>
+</div><!-- /panel-manual -->
+
+<footer>
+  <span>MagiKH Keyboard v1.0 &mdash; © 2026 KY SEA. All rights reserved.</span>
+</footer>
+
+<script>
+function setMode(m) {
+  document.body.className = 'mode-' + m;
+  document.getElementById('tab-auto').className   = 'tab-btn' + (m === 'auto'   ? ' active-auto'   : '');
+  document.getElementById('tab-manual').className = 'tab-btn' + (m === 'manual' ? ' active-manual' : '');
+}
+</script>
+</body>
+</html>
