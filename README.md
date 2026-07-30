@@ -1,7 +1,8 @@
-This is a Khmer Input Method Editor (IME) which can assist your Khmer typing experience.
+This is a Khmer Keyboard (Input Method Editor (IME)) which can assist your Khmer typing experience. Free Download!!!
 Verion1.0.0 has been release at
 https://github.com/kysea-git/MagiKH-Keyboard/releases/tag/Khmer_Input_Method_Editor
 
+Tag: #Khmer Keyboard #ក្ដារចុច​ខ្មែរ​
 ### ខ្មែរ
 
 **វាយអក្សរខ្មែរដូចប្រើវេទមន្ត** — កម្មវិធីក្ដារចុចខ្មែរ សម្រាប់ Windows ដោយឥតគិតថ្លៃ។
