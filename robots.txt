@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kysea-git.github.io/MagiKH-Keyboard/sitemap.xml
