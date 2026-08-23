@@ -4,6 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MagiKH Keyboard — Khmer Keyboard Layout</title>
+<meta name="description" content="MagiKH គឺកម្មវិធីក្តារចុចខ្មែរ ចេញឆ្នាំ២០២៦ ឥតគិតថ្លៃ សម្រាប់ Windows។ MagiKH is a free Khmer input method editor (IME) for Windows for 2026. Type Khmer fast in Auto mode — no Shift, no Alt+Ctrl, no COENG (្) needed — with word prediction.">
+<meta name="keywords" content="Khmer keyboard, Khmer keyboard 2026, Khmer IME, Khmer input method editor, MagiKH, type Khmer, Khmer typing Windows, new Khmer Keyboard, modern Khmer Keyboard, download Khmer keyboard, Khmer Unicode, Unicode, កម្មវិធីក្តារចុចខ្មែរ, វាយអក្សរខ្មែរ, ក្តារចុចខ្មែរ, ដំឡើងក្តារចុចខ្មែរ, ក្តារចុចខ្មែរថ្មី, ក្តារចុចខ្មែរ២០២៦, វាយអក្សរខ្មែរលឿន, វាយអក្សរខ្មែរដោយស្វ័យប្រវត្តិ, វាយអក្សរខ្មែរដោយមិនចាំបាច់ចុច Shift, វាយអក្សរខ្មែរដោយមិនចាំបាច់ដាក់ជើង, វាយអក្សរខ្មែរដោយមិនចាំបាច់ចុច Alt+Ctrl, វាយអក្សរខ្មែរដោយមានការទស្សទាយពាក្យ, កម្មវិធីវាយអក្សរខ្មែរ, កម្មវិធីវាយអក្សរខ្មែរសម្រាប់ Windows, កម្មវិធីវាយអក្សរខ្មែរសម្រាប់ Windows 10, កម្មវិធីវាយអក្សរខ្មែរសម្រាប់ Windows 11, ខ្មែរយូនីកូដ, យូនីកូដ">
+<meta name="author" content="KY SEA">
+<meta name="robots" content="index, follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@400;500;600;700&family=Noto+Serif+Khmer:wght@600;700;800&display=swap" rel="stylesheet">
@@ -12,7 +16,7 @@
   :root {
     /* Page / UI — lavender */
     --bg:              #f8f8fb;
-    --accent:          #8b6fd4;
+    --accent:          #9637F0;
     --accent-auto:     #7c5cbf;
     --text:            #2a1f5e;
     --text-light:      #6b5fa0;
@@ -33,7 +37,7 @@
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans Khmer", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans Khmer", "Khmer OS", "Khmer UI", "Nirmala UI", sans-serif;
     background: var(--bg);
     color: var(--text);
     min-height: 100vh;
@@ -59,15 +63,33 @@
   header h1 { font-size: 21px; font-weight: 700; }
   header p  { font-size: 13px; color: #b0a8cc; margin-top: 2px; }
   .badge {
-    margin-left: auto;
     background: rgba(255,255,255,.08);
     border: 1px solid rgba(255,255,255,.14);
     border-radius: 20px; padding: 4px 14px;
     font-size: 12px; color: #b0a8cc; white-space: nowrap;
   }
 
+  /* ── Language toggle ── */
+  body.lang-en .lang-km { display: none; }
+  body.lang-km .lang-en { display: none; }
+  .header-right { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+  .lang-switch { display: flex; }
+  .lang-switch button {
+    font-family: inherit; font-size: 12px; font-weight: 700;
+    padding: 5px 13px; cursor: pointer;
+    background: rgba(255,255,255,.08); color: #cfc7e8;
+    border: 1px solid rgba(255,255,255,.2);
+  }
+  .lang-switch button:first-child { border-radius: 20px 0 0 20px; }
+  .lang-switch button:last-child  { border-radius: 0 20px 20px 0; border-left: none; }
+  .lang-switch button.active { background: #fff; color: var(--header-bg); border-color: #fff; }
+
+  /* Header subtitle + nav tabs — Noto Serif Khmer (display face) */
+  header p .lang-km,
+  .page-nav a .lang-km { font-family: "Noto Serif Khmer", "Noto Sans Khmer", "Khmer OS", "Khmer UI", serif; }
+
   /* ── Page nav ── */
-  .page-nav { display: flex; gap: 8px; padding: 18px 40px 0; }
+  .page-nav { display: flex; gap: 8px; padding: 18px 40px 0; flex-wrap: wrap; }
   .page-nav a {
     font-size: 13px; font-weight: 600; color: var(--text-light);
     text-decoration: none; padding: 6px 16px;
@@ -85,7 +107,7 @@
     color: var(--text-light);
     border-bottom: 3px solid transparent;
     transition: color .15s, border-color .15s;
-    font-family: "Noto Sans Khmer","Khmer OS",-apple-system,sans-serif;
+    font-family: "Noto Sans Khmer","Khmer OS","Khmer UI","Nirmala UI",-apple-system,sans-serif;
   }
   .tab-btn:hover { color: var(--text); }
   .tab-btn.active-auto   { color: var(--accent-auto);  border-color: var(--accent-auto);  }
@@ -129,11 +151,11 @@
 
   .key .c-tl { font-size:9px; color:var(--key-label); opacity:.45; font-family:-apple-system,sans-serif; }
   .key .c-tr { font-size:15px; line-height:1; color:var(--col-shift);
-               font-family:"Noto Sans Khmer","Khmer OS","Battambang",sans-serif; }
+               font-family:"Noto Sans Khmer","Khmer OS","Khmer UI","Nirmala UI",sans-serif; }
   .key .c-bl { font-size:18px; line-height:1; color:var(--col-base);
-               font-family:"Noto Sans Khmer","Khmer OS","Battambang",sans-serif; }
+               font-family:"Noto Sans Khmer","Khmer OS","Khmer UI","Nirmala UI",sans-serif; }
   .key .c-br { font-size:13px; line-height:1; color:var(--col-altgr);
-               font-family:"Noto Sans Khmer","Khmer OS","Battambang",sans-serif; }
+               font-family:"Noto Sans Khmer","Khmer OS","Khmer UI","Nirmala UI",sans-serif; }
   .key .c-tr:empty, .key .c-br:empty { display:none; }
 
   /* Wide / special */
@@ -161,7 +183,7 @@
   /* Spacebar labels */
   .key.space .sp-label {
     grid-column:1/span 2; text-align:center; justify-self:center;
-    font-family:"Noto Sans Khmer","Khmer OS",-apple-system,sans-serif;
+    font-family:"Noto Sans Khmer","Khmer OS","Khmer UI","Nirmala UI",-apple-system,sans-serif;
     font-size:10px; color:var(--key-label); line-height:1.4;
     display:none;
   }
@@ -227,7 +249,7 @@
   .ex-card h3 { font-size:13px; color:var(--text-light); margin-bottom:8px; }
   .ex-word {
     font-size:28px; color:var(--accent);
-    font-family:"Noto Serif Khmer","Noto Sans Khmer","Battambang",serif; margin-bottom:12px;
+    font-family:"Noto Serif Khmer","Noto Sans Khmer","Khmer OS","Khmer UI",serif; margin-bottom:12px;
   }
   table.ex { width:100%; border-collapse:collapse; font-size:13px; }
   table.ex th.ex-lbl {
@@ -237,7 +259,7 @@
   }
   table.ex td {
     padding:6px 8px; border-bottom:1px solid var(--divider); text-align:center;
-    font-family:"Noto Sans Khmer","Khmer OS","Battambang",sans-serif; font-size:15px;
+    font-family:"Noto Sans Khmer","Khmer OS","Khmer UI","Nirmala UI",sans-serif; font-size:15px;
   }
   table.ex td.k {
     font-family:"Courier New",monospace; font-size:14px; font-weight:700;
@@ -252,23 +274,37 @@
     font-size:12px; color:var(--text-light);
     display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px;
   }
+
+  /* ── Mobile ── */
+  @media (max-width: 600px) {
+    header { flex-wrap: wrap; padding: 16px 20px 14px; row-gap: 10px; }
+    .header-right { margin-left: 0; width: 100%; justify-content: space-between; }
+    .badge { display: none; }
+    .page-nav { padding: 14px 20px 0; }
+  }
 </style>
 </head>
-<body class="mode-auto">
+<body class="mode-auto lang-km">
 
 <header>
   <div class="logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46"><rect x="2" y="2" width="42" height="42" rx="6" fill="white" stroke="#9637F0" stroke-width="4"/><text x="23" y="37" font-family="'Khmer OS','Khmer UI',serif" font-size="36" font-weight="900" fill="black" text-anchor="middle">ម</text></svg></div>
   <div>
     <h1>MagiKH Keyboard</h1>
-    <p>Type Khmer Like Magic</p>
+    <p><span class="lang-km">ប្លង់ក្តារចុចខ្មែរ Unicode</span><span class="lang-en">Khmer Unicode Keyboard Layout</span></p>
   </div>
-  <span class="badge">v1.0 &nbsp;|&nbsp; Windows 10/11 x64</span>
+  <div class="header-right">
+    <span class="badge">v1.0.0 &nbsp;|&nbsp; Windows 10/11 x64</span>
+    <div class="lang-switch">
+      <button data-l="en" onclick="setLang('en')">English</button>
+      <button data-l="km" onclick="setLang('km')">ខ្មែរ</button>
+    </div>
+  </div>
 </header>
 
 <div class="page-nav">
   <a href="index.html" ><span class="lang-km">ទំព័រដើម</span><span class="lang-en">Home</span></a>
   <a href="How-to-Install.html"><span class="lang-km">របៀបដំឡើង</span><span class="lang-en">Install &amp; Setup</span></a>
-  <a href="How-to-Use.html" class="active"><span class="lang-km">ប្លង់ក្តារចុច</span><span class="lang-en">Keyboard Layout</span></a>
+  <a href="How-to-Use.html" class="active"><span class="lang-km">របៀបប្រើ / ប្លង់ក្តារចុច</span><span class="lang-en">How to Use / Keyboard Layout</span></a>
 </div>
 
 <div class="tabs">
@@ -447,15 +483,38 @@
 </div><!-- /panel-manual -->
 
 <footer>
-  <span>MagiKH Keyboard v1.0 &mdash; © 2026 KY SEA. All rights reserved.</span>
+  <span>MagiKH Keyboard v1.0.0 &mdash; © 2026 KY SEA. All rights reserved.</span>
 </footer>
 
 <script>
-function setMode(m) {
-  document.body.className = 'mode-' + m;
-  document.getElementById('tab-auto').className   = 'tab-btn' + (m === 'auto'   ? ' active-auto'   : '');
-  document.getElementById('tab-manual').className = 'tab-btn' + (m === 'manual' ? ' active-manual' : '');
-}
+  var currentMode = 'auto';
+  var currentLang = 'km';
+
+  function applyBody() {
+    document.body.className = 'mode-' + currentMode + ' lang-' + currentLang;
+  }
+
+  function setMode(m) {
+    currentMode = m;
+    applyBody();
+    document.getElementById('tab-auto').className   = 'tab-btn' + (m === 'auto'   ? ' active-auto'   : '');
+    document.getElementById('tab-manual').className = 'tab-btn' + (m === 'manual' ? ' active-manual' : '');
+  }
+
+  function setLang(l) {
+    currentLang = l;
+    applyBody();
+    try { localStorage.setItem('magikh_lang', l); } catch (e) {}
+    var btns = document.querySelectorAll('.lang-switch button');
+    for (var i = 0; i < btns.length; i++)
+      btns[i].classList.toggle('active', btns[i].getAttribute('data-l') === l);
+  }
+
+  (function () {
+    var l = 'km';
+    try { l = localStorage.getItem('magikh_lang') || 'km'; } catch (e) {}
+    setLang(l);
+  })();
 </script>
 </body>
 </html>
