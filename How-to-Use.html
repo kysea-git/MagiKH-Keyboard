@@ -14,7 +14,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MagiKH Keyboard — Khmer Keyboard Layout</title>
 <meta name="description" content="MagiKH គឺកម្មវិធីក្តារចុចខ្មែរ ចេញឆ្នាំ២០២៦ ឥតគិតថ្លៃ សម្រាប់ Windows។ MagiKH is a free Khmer input method editor (IME) for Windows for 2026. Type Khmer fast in Auto mode — no Shift, no Alt+Ctrl, no COENG (្) needed — with word prediction.">
-<meta name="keywords" content="Khmer keyboard, Khmer keyboard 2026, Khmer IME, Khmer input method editor, MagiKH, type Khmer, Khmer typing Windows, new Khmer Keyboard, modern Khmer Keyboard, download Khmer keyboard, Khmer Unicode, Unicode, កម្មវិធីក្តារចុចខ្មែរ, វាយអក្សរខ្មែរ, ក្តារចុចខ្មែរ, ដំឡើងក្តារចុចខ្មែរ, ក្តារចុចខ្មែរថ្មី, ក្តារចុចខ្មែរ២០២៦, វាយអក្សរខ្មែរលឿន, វាយអក្សរខ្មែរដោយស្វ័យប្រវត្តិ, វាយអក្សរខ្មែរដោយមិនចាំបាច់ចុច Shift, វាយអក្សរខ្មែរដោយមិនចាំបាច់ដាក់ជើង, វាយអក្សរខ្មែរដោយមិនចាំបាច់ចុច Alt+Ctrl, វាយអក្សរខ្មែរដោយមានការទស្សទាយពាក្យ, កម្មវិធីវាយអក្សរខ្មែរ, កម្មវិធីវាយអក្សរខ្មែរសម្រាប់ Windows, កម្មវិធីវាយអក្សរខ្មែរសម្រាប់ Windows 10, កម្មវិធីវាយអក្សរខ្មែរសម្រាប់ Windows 11, ខ្មែរយូនីកូដ, យូនីកូដ">
+<meta name="keywords" content="Khmer keyboard, Khmer keyboard 2026, Khmer IME, Khmer input method editor, MagiKH, type Khmer, Khmer typing Windows, new Khmer Keyboard, modern Khmer Keyboard, download Khmer keyboard, Khmer Unicode, Unicode, កម្មវិធីក្តារចុចខ្មែរ, វាយអក្សរខ្មែរ, ក្តារចុចខ្មែរ, ដំឡើងក្តារចុចខ្មែរ, ក្តារចុចខ្មែរថ្មី, ក្តារចុចខ្មែរ២០២៦, វាយអក្សរខ្មែរលឿន, វាយអក្សរខ្មែរដោយស្វ័យប្រវត្តិ, វាយអក្សរខ្មែរដោយមិនចាំបាច់ចុច Shift, វាយអក្សរខ្មែរដោយមិនចាំបាច់ដាក់ជើង, វាយអក្សរខ្មែរដោយមិនចាំបាច់ចុច Alt+Ctrl, វាយអក្សរខ្មែរដោយមានការទស្សន៍ទាយពាក្យ, កម្មវិធីវាយអក្សរខ្មែរ, កម្មវិធីវាយអក្សរខ្មែរសម្រាប់ Windows, កម្មវិធីវាយអក្សរខ្មែរសម្រាប់ Windows 10, កម្មវិធីវាយអក្សរខ្មែរសម្រាប់ Windows 11, ខ្មែរយូនីកូដ, យូនីកូដ">
 <meta name="author" content="KY SEA">
 <meta name="robots" content="index, follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,6 +27,7 @@
     --bg:              #f9f8fb;
     --accent:          #6A1AE6;
     --accent-auto:     #835cbf;
+    --accent-manual:   #0f6e56;   /* Manual mode: teal, distinct from Auto purple */
     --text:            #381f5e;
     --text-light:      #785fa0;
     --card:            #ffffff;
@@ -120,7 +121,7 @@
   }
   .tab-btn:hover { color: var(--text); }
   .tab-btn.active-auto   { color: var(--accent-auto);  border-color: var(--accent-auto);  }
-  .tab-btn.active-manual { color: var(--accent);        border-color: var(--accent);        }
+  .tab-btn.active-manual { color: var(--accent-manual); border-color: var(--accent-manual); }
   .tabs-underline { height: 1px; background: var(--divider); margin: 0 40px; }
 
   /* ── Keyboard ── */
@@ -236,7 +237,7 @@
     letter-spacing:.05em; margin-bottom:10px;
   }
   .card h2.purple { color:var(--accent-auto); }
-  .card h2.indigo { color:var(--accent); }
+  .card h2.indigo { color:var(--accent-manual); }
   .card ul { padding-left:16px; }
   .card li { font-size:13.5px; line-height:1.75; color:var(--text); margin-bottom:2px; }
   .tag {
@@ -302,7 +303,7 @@
     <p><span class="lang-km">វាយអក្សរខ្មែរដូចប្រើវេទមន្ត</span><span class="lang-en">Type Khmer Like Magic</span></p>
   </div>
   <div class="header-right">
-    <span class="badge">v1.0.0 &nbsp;|&nbsp; Windows 10/11 x64</span>
+    <span class="badge">v2.0.0 &nbsp;|&nbsp; Windows 10/11 x64</span>
     <div class="lang-switch">
       <button data-l="en" onclick="setLang('en')">English</button>
       <button data-l="km" onclick="setLang('km')">ខ្មែរ</button>
@@ -441,11 +442,13 @@
     <div class="card">
       <h2 class="purple">របៀបវាយ (Auto)</h2>
       <ul>
-        <li>វាយដោយចុចគ្រាប់ចុចតែប៉ុណ្ណោះ — <strong>មិនចាំបាច់ចុច <span class="tag purple">Shift</span> ឬ <span class="tag purple">Alt+Ctrl</span> </strong></li>
+        <li>វាយដោយចុចគ្រាប់ចុចតែប៉ុណ្ណោះ — <strong>វាយអក្សរខ្មែរ មិនចាំបាច់ចុច <span class="tag purple">Shift</span> ឬ <span class="tag purple">Alt+Ctrl</span> </strong></li>
         <li>មិនចាំបាច់ដាក់ជើង <span class="tag purple">្</span> ព្រោះ <span class="tag purple">្</span>ត្រូវបានដាក់ដោយ <strong>ស្វ័យប្រវត្តិ</strong> </li>
         <li>ចុច <span class="tag green">Space</span> — កំណត់យកពាក្យកំពុងវាយ</li>
         <li>ចុច <span class="tag purple">Tab</span> រួចហើយចុច<span class="tag purple">1–9</span> — ជ្រើសរើសពាក្យផ្សេងៗ</li>
-        <li>ចុច <span class="tag yellow">Caps Lock</span> — ប្ដូរទៅ Manual (ដោយដៃ)</li>
+        <li>វាយពាក្យអង់គ្លេស → ជ្រើសពីបញ្ជីពាក្យ (ចុច <span class="tag purple">Shift</span> ជាមួយអក្សរទីមួយ ដើម្បីបានពាក្យណែនាំលឿនជាង)</li>
+        <li>ចុច <span class="tag purple">Backspace</span> — លុបជើងទាំងមូល ក្នុងការចុចតែម្ដង</li>
+        <li>ចុច <span class="tag yellow">Caps Lock</span> — ប្ដូរទៅ Manual (ដោយដៃ) ហើយភ្លើង Caps Lock ភ្លឺ</li>
         <li>ចុច <span class="tag yellow">Ctrl</span>+<span class="tag green">Space</span> — ប្ដូរពីខ្មែរទៅអង់គ្លេស ឬពីអង់គ្លេសទៅខ្មែរ</li>
       </ul>
     </div>
@@ -495,15 +498,55 @@
         <li>ចុច <span class="tag purple">្</span>ដោយខ្លួនឯង</li>
         <li><span class="tag purple">Space</span> — ចន្លោះមិនឃើញ (Zero-Width Space)</li>
         <li><span class="tag purple">Shift+Space</span> — ដកឃ្លា (Normal Space)</li>
-        <li>ចុច <span class="tag yellow">Caps Lock</span> — ប្ដូរទៅ Auto (ស្វ័យប្រវត្តិ)</li>
+        <li>ពាក្យណែនាំ — ចុច <span class="tag purple">Tab</span> ដើម្បីមើលពាក្យទាំងអស់ (អាចបិទ «ការទស្សន៍ទាយ (Manual prediction)» ក្នុងការកំណត់)</li>
+        <li>ចុច <span class="tag yellow">Caps Lock</span> — ប្ដូរទៅ Auto (ស្វ័យប្រវត្តិ) ហើយភ្លើង Caps Lock រលត់</li>
         <li>ចុច <span class="tag yellow">Ctrl</span>+<span class="tag green">Space</span> — ប្ដូរពីខ្មែរទៅអង់គ្លេស ឬពីអង់គ្លេសទៅខ្មែរ</li>
       </ul>
     </div>
   </div>
 </div><!-- /panel-manual -->
 
+<!-- ═══════════════ MODES, ICON AND SETTINGS (both tabs) ═══════════════ -->
+<div class="cards" style="margin: 0 40px;">
+  <div class="card">
+    <h2 class="purple"><span class="lang-km">របៀបវាយ រូបតំណាង និងការកំណត់</span><span class="lang-en">Modes, taskbar icon and settings</span></h2>
+    <ul>
+      <li>
+        <span class="lang-km">រូបតំណាងលើ Taskbar៖ <strong>ខ</strong> = Auto, <strong>ខ<sub>M</sub></strong> = Manual, <strong>A</strong> = អង់គ្លេស។ ចុចលើវា ដើម្បីប្ដូររបៀបវាយ។</span>
+        <span class="lang-en">Taskbar icon: <strong>ខ</strong> = Auto, <strong>ខ<sub>M</sub></strong> = Manual, <strong>A</strong> = English. Click it to switch mode.</span>
+      </li>
+      <li>
+        <span class="lang-km">ភ្លើង <span class="tag yellow">Caps Lock</span>៖ ភ្លឺ = Manual, រលត់ = Auto។ ក្នុងរបៀបអង់គ្លេស Caps Lock វាយអក្សរធំ ដូចក្ដារចុចធម្មតា។</span>
+        <span class="lang-en"><span class="tag yellow">Caps Lock</span> light: on = Manual, off = Auto. In English mode, Caps Lock types capital letters as usual.</span>
+      </li>
+      <li>
+        <span class="lang-km">ចុចខាងស្ដាំលើរូបតំណាង ដើម្បីបើក ឬបិទ៖</span>
+        <span class="lang-en">Right-click the icon to turn these on or off:</span>
+        <ul>
+          <li>
+            <span class="lang-km"><strong>ការទស្សន៍ទាយ (Manual prediction)</strong> — ពាក្យណែនាំក្នុង Manual — បើកស្រាប់</span>
+            <span class="lang-en"><strong>Manual prediction</strong> — suggestions in Manual mode — on by default</span>
+          </li>
+          <li>
+            <span class="lang-km"><strong>បញ្ចូលចន្លោះមិនឃើញដោយស្វ័យប្រវត្តិ (Auto ZWSP)</strong> — ចន្លោះមិនឃើញរវាងពាក្យ ដើម្បីឲ្យអត្ថបទចុះបន្ទាត់ត្រឹមត្រូវ — បើកស្រាប់</span>
+            <span class="lang-en"><strong>Auto ZWSP</strong> — invisible spaces between words so long lines wrap neatly — on by default</span>
+          </li>
+          <li>
+            <span class="lang-km"><strong>ដកឃ្លាជាចន្លោះមិនឃើញ (Space types ZWSP)</strong> — ប្រើដកឃ្លាវាយចន្លោះមិនឃើញ ពេលគ្មានចន្លោះមិនឃើញ</span>
+            <span class="lang-en"><strong>Space types ZWSP</strong> — Space types an invisible space when there isn't one already</span>
+          </li>
+          <li>
+            <span class="lang-km"><strong>ណែនាំពាក្យអង់គ្លេស (English suggestions)</strong> — បើកស្រាប់</span>
+            <span class="lang-en"><strong>English suggestions</strong> — on by default</span>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
 <footer>
-  <span>MagiKH Keyboard v1.0.0 &mdash; © 2026 KY SEA. All rights reserved.</span>
+  <span>MagiKH Keyboard v2.0.0 &mdash; © 2026 KY SEA. All rights reserved.</span>
 </footer>
 
 <script>

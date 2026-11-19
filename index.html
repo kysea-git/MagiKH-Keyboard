@@ -14,7 +14,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MagiKH Keyboard — Khmer Keyboard for Windows · កម្មវិធីក្តារចុចខ្មែរ Khmer IME (Input Method Editor)</title>
 <meta name="description" content="MagiKH គឺកម្មវិធីក្តារចុចខ្មែរ ចេញឆ្នាំ២០២៦ ឥតគិតថ្លៃ សម្រាប់ Windows។ MagiKH is a free Khmer input method editor (IME) for Windows for 2026. Type Khmer fast in Auto mode — no Shift, no Alt+Ctrl, no COENG (្) needed — with word prediction.">
-<meta name="keywords" content="Khmer keyboard, Khmer keyboard 2026, Khmer IME, Khmer input method editor, MagiKH, type Khmer, Khmer typing Windows, new Khmer Keyboard, modern Khmer Keyboard, download Khmer keyboard, Khmer Unicode, Unicode, កម្មវិធីក្តារចុចខ្មែរ, វាយអក្សរខ្មែរ, ក្តារចុចខ្មែរ, ដំឡើងក្តារចុចខ្មែរ, ក្តារចុចខ្មែរថ្មី, ក្តារចុចខ្មែរ២០២៦, វាយអក្សរខ្មែរលឿន, វាយអក្សរខ្មែរដោយស្វ័យប្រវត្តិ, វាយអក្សរខ្មែរដោយមិនចាំបាច់ចុច Shift, វាយអក្សរខ្មែរដោយមិនចាំបាច់ដាក់ជើង, វាយអក្សរខ្មែរដោយមិនចាំបាច់ចុច Alt+Ctrl, វាយអក្សរខ្មែរដោយមានការទស្សទាយពាក្យ, កម្មវិធីវាយអក្សរខ្មែរ, កម្មវិធីវាយអក្សរខ្មែរសម្រាប់ Windows, កម្មវិធីវាយអក្សរខ្មែរសម្រាប់ Windows 10, កម្មវិធីវាយអក្សរខ្មែរសម្រាប់ Windows 11, ខ្មែរយូនីកូដ, យូនីកូដ">
+<meta name="keywords" content="Khmer keyboard, Khmer keyboard 2026, Khmer IME, Khmer input method editor, MagiKH, type Khmer, Khmer typing Windows, new Khmer Keyboard, modern Khmer Keyboard, download Khmer keyboard, Khmer Unicode, Unicode, កម្មវិធីក្តារចុចខ្មែរ, វាយអក្សរខ្មែរ, ក្តារចុចខ្មែរ, ដំឡើងក្តារចុចខ្មែរ, ក្តារចុចខ្មែរថ្មី, ក្តារចុចខ្មែរ២០២៦, វាយអក្សរខ្មែរលឿន, វាយអក្សរខ្មែរដោយស្វ័យប្រវត្តិ, វាយអក្សរខ្មែរដោយមិនចាំបាច់ចុច Shift, វាយអក្សរខ្មែរដោយមិនចាំបាច់ដាក់ជើង, វាយអក្សរខ្មែរដោយមិនចាំបាច់ចុច Alt+Ctrl, វាយអក្សរខ្មែរដោយមានការទស្សន៍ទាយពាក្យ, កម្មវិធីវាយអក្សរខ្មែរ, កម្មវិធីវាយអក្សរខ្មែរសម្រាប់ Windows, កម្មវិធីវាយអក្សរខ្មែរសម្រាប់ Windows 10, កម្មវិធីវាយអក្សរខ្មែរសម្រាប់ Windows 11, ខ្មែរយូនីកូដ, យូនីកូដ">
 <meta name="author" content="KY SEA">
 <meta name="robots" content="index, follow">
 <!-- ⚠ Replace this URL with your real public address if you host somewhere other than GitHub Pages -->
@@ -51,10 +51,10 @@
   "description": "A free Khmer keyboard or input method editor (IME) for Windows. Type Khmer fast in Auto mode with no Shift, no Alt+Ctrl and no COENG needed, plus word prediction.",
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "Windows 10, Windows 11",
-  "softwareVersion": "1.0.0",
+  "softwareVersion": "2.0.0",
   "inLanguage": ["km", "en"],
   "url": "https://kysea-git.github.io/MagiKH-Keyboard/",
-  "downloadUrl": "https://github.com/kysea-git/MagiKH-Keyboard/releases/download/Khmer_Input_Method_Editor/MagiKH_Keyboard_Setup.exe",
+  "downloadUrl": "https://github.com/kysea-git/MagiKH-Keyboard/releases/latest/download/MagiKH_Keyboard_Setup.exe",
   "author": { "@type": "Person", "name": "KY SEA" },
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
 }
@@ -220,9 +220,36 @@
     font-size: 12px; font-weight: 600; font-family: monospace;
   }
   .tag.purple { background: #f1eafb; color: #835cbf; }
+  .tag.manual { background: #e1f5ee; color: #0f6e56; }   /* Manual mode: teal, distinct from Auto purple */
+  .tag.yellow { background: #fdf3d6; color: #8a6400; }
+
+  /* Two modes, side by side (stacks on narrow screens) */
+  .modes { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .modes .card { margin-bottom: 0; }
+  .mode-head { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+  .mode-head .tag { font-size: 13px; margin-right: 6px; }
+  .modes .feature-list li { font-size: 14px; margin-bottom: 6px; }
+  .modes-switch { font-size: 14px; color: var(--text); margin: 12px 0 0; }
 
   .about { font-size: 14.5px; line-height: 1.75; color: var(--text); }
   body.lang-km .about { line-height: 1.95; }
+
+  /* ── Optional survey popup, shown after the Download click ── */
+  .survey-overlay {
+    position: fixed; inset: 0; z-index: 1000; padding: 20px;
+    background: rgba(30, 15, 60, .45);
+    display: none; align-items: center; justify-content: center;
+  }
+  .survey-overlay.open { display: flex; }
+  .survey-box {
+    background: var(--card); border-radius: 14px; max-width: 440px; width: 100%;
+    padding: 24px 24px 20px; box-shadow: 0 12px 40px rgba(56, 31, 94, .25);
+  }
+  .survey-box h3 { font-size: 18px; color: var(--text); margin-bottom: 10px; }
+  .survey-box p { font-size: 14.5px; line-height: 1.75; color: var(--text); }
+  body.lang-km .survey-box p { line-height: 1.95; }
+  .survey-actions { display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap; margin-top: 18px; }
+  .survey-actions .btn { cursor: pointer; }
 
   /* ── Footer ── */
   footer {
@@ -255,7 +282,7 @@
     <p><span class="lang-km">វាយអក្សរខ្មែរដូចប្រើវេទមន្ត</span><span class="lang-en">Type Khmer Like Magic</span></p>
   </div>
   <div class="header-right">
-    <span class="badge">v1.0.0 &nbsp;|&nbsp; Windows 10/11 x64</span>
+    <span class="badge">v2.0.0 &nbsp;|&nbsp; Windows 10/11 x64</span>
     <div class="lang-switch">
       <button data-l="en" onclick="setLang('en')">English</button>
       <button data-l="km" onclick="setLang('km')">ខ្មែរ</button>
@@ -275,12 +302,12 @@
     <h2><span class="lang-km">វាយអក្សរខ្មែរដូចប្រើវេទមន្ត</span><span class="lang-en">Type Khmer Like Magic</span></h2>
     <p class="sub"><span class="lang-km">កម្មវិធីក្ដារចុចខ្មែរទំនើប ឆ្នាំ២០២៦ សម្រាប់ Windows ដោយឥតគិតថ្លៃ។</span><span class="lang-en">A free, modern Khmer IME (Input Method Editor) or simply a Khmer keyboard software for Windows — for 2026.</span></p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="https://github.com/kysea-git/MagiKH-Keyboard/releases/download/Khmer_Input_Method_Editor/MagiKH_Keyboard_Setup.exe">⬇&nbsp;<span class="lang-km">ទាញយក v1.0.0</span><span class="lang-en">Download v1.0.0</span></a>
+      <a class="btn btn-primary" href="https://github.com/kysea-git/MagiKH-Keyboard/releases/latest/download/MagiKH_Keyboard_Setup.exe">⬇&nbsp;<span class="lang-km">ទាញយក v2.0.0</span><span class="lang-en">Download v2.0.0</span></a>
       <a class="btn btn-ghost" href="How-to-Install.html"><span class="lang-km">របៀបដំឡើង</span><span class="lang-en">How to Install</span></a>
     </div>
     <!-- <p class="hero-note">
-      <span class="lang-km">កំណែ v1.0.0 ត្រូវបានចេញផ្សាយនៅលើ <a href="https://github.com/kysea-git/MagiKH-Keyboard/releases/tag/Khmer_Input_Method_Editor">GitHub</a></span>
-      <span class="lang-en">Version 1.0.0 released on <a href="https://github.com/kysea-git/MagiKH-Keyboard/releases/tag/Khmer_Input_Method_Editor">GitHub</a></span>
+      <span class="lang-km">កំណែ v2.0.0 ត្រូវបានចេញផ្សាយនៅលើ <a href="https://github.com/kysea-git/MagiKH-Keyboard/releases/latest">GitHub</a></span>
+      <span class="lang-en">Version 2.0.0 released on <a href="https://github.com/kysea-git/MagiKH-Keyboard/releases/latest">GitHub</a></span>
     </p>-->
   </div>
 </section>
@@ -291,32 +318,75 @@
   <h2 class="section-title"><span class="lang-km">អំពី MagiKH — កម្មវិធីក្ដារចុចខ្មែរ ឥតគិតថ្លៃ សម្រាប់ Windows</span><span class="lang-en">About MagiKH — Free Khmer Keyboard for Windows</span></h2>
   <div class="card">
     <p class="about">
-      <span class="lang-km">MagiKH Keyboard ជា<strong>កម្មវិធីក្ដារចុចខ្មែរ</strong>ថ្មី ឥតគិតថ្លៃ សម្រាប់ <strong>Windows 10 និង 11</strong> (ចេញឆ្នាំ ២០២៦)។ កម្មវិធីក្ដារចុចនេះ ធ្វើឲ្យការវាយអក្សរខ្មែរលើកុំព្យូទ័រ លឿន និងងាយស្រួល៖ ក្នុង Auto Mode មិនចាំបាច់ចុច Shift, មិនចាំបាច់ដាក់ជើង (្) និងមានការទស្សទាយពាក្យ។ កូដអក្សរ គឺជា <strong>ខ្មែរយូនីកូដ</strong> ស្តង់ដារ។</span>
-      <span class="lang-en">MagiKH Keyboard is a new, free <strong>Khmer IME (Input Method Editor)</strong> or simply a <strong>Khmer keyboard software</strong> for <strong>Windows 10 and 11</strong>, released in <strong>2026</strong>. It makes Khmer typing on Windows fast and simple — in Auto mode there is no Shift, no COENG (្), and it includes word prediction. The character code output is standard <strong>Khmer Unicode</strong>.</span>
+      <span class="lang-km">MagiKH Keyboard ជា<strong>កម្មវិធីក្ដារចុចខ្មែរ</strong>ថ្មី ឥតគិតថ្លៃ សម្រាប់ <strong>Windows 10 និង 11</strong> (ចេញឆ្នាំ ២០២៦)។ កម្មវិធីក្ដារចុចនេះ ធ្វើឲ្យការវាយអក្សរខ្មែរលើកុំព្យូទ័រ លឿន និងងាយស្រួល៖ ក្នុង Auto Mode វាយអក្សរខ្មែរមិនចាំបាច់ចុច Shift, មិនចាំបាច់ដាក់ជើង (្) និងមានការទស្សន៍ទាយពាក្យ។ កូដអក្សរ គឺជា <strong>ខ្មែរយូនីកូដ</strong> ស្តង់ដារ។</span>
+      <span class="lang-en">MagiKH Keyboard is a new, free <strong>Khmer IME (Input Method Editor)</strong> or simply a <strong>Khmer keyboard software</strong> for <strong>Windows 10 and 11</strong>, released in <strong>2026</strong>. It makes Khmer typing on Windows fast and simple — in Auto mode Khmer needs no Shift, no COENG (្), and it includes word prediction. The character code output is standard <strong>Khmer Unicode</strong>.</span>
     </p>
   </div>
 
-  <!-- Features -->
-  <h2 class="section-title"><span class="lang-km">មុខងារ (ក្នុង Auto Mode — ស្វ័យប្រវត្តិ)</span><span class="lang-en">Features (in Auto mode)</span></h2>
+  <!-- Two modes, one familiar layout -->
+  <h2 class="section-title"><span class="lang-km">ប្លង់ក្ដារចុចមួយ វិធីវាយពីរ</span><span class="lang-en">One keyboard layout, two ways to type</span></h2>
+  <div class="modes">
+    <div class="card">
+      <div class="mode-head"><span class="tag purple">Auto</span><span class="lang-km">វិធីវាយថ្មី</span><span class="lang-en">A new way to type</span></div>
+      <ul class="feature-list">
+        <li>
+          <span class="lang-km">គ្រាន់តែវាយ — មិនចាំបាច់ចុច <span class="tag purple">Shift</span> ឬ <span class="tag purple">Alt+Ctrl</span></span>
+          <span class="lang-en">Just type — no <span class="tag purple">Shift</span>, no <span class="tag purple">Alt+Ctrl</span></span>
+        </li>
+        <li>
+          <span class="lang-km">មិនចាំបាច់ដាក់ជើង <span class="tag purple">្</span> — ដាក់ដោយស្វ័យប្រវត្តិ</span>
+          <span class="lang-en">No COENG sign <span class="tag purple">្</span> (ជើង) needed — added automatically</span>
+        </li>
+        <li>
+          <span class="lang-km">កម្មវិធីផ្គុំពាក្យឲ្យ និងអាចទស្សន៍ទាយពាក្យ និងឃ្លា</span>
+          <span class="lang-en">MagiKH builds the word for you, with word and phrase prediction</span>
+        </li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="mode-head"><span class="tag manual">Manual</span><span class="lang-km">វិធីវាយដែលអ្នកធ្លាប់ប្រើ</span><span class="lang-en">The way you already type</span></div>
+      <ul class="feature-list">
+        <li>
+          <span class="lang-km">វាយដូចក្ដារចុចខ្មែរ NiDA ធម្មតា</span>
+          <span class="lang-en">Type as on the normal NiDA keyboard</span>
+        </li>
+        <li>
+          <span class="lang-km">អាចទស្សន៍ទាយពាក្យ</span>
+          <span class="lang-en">Word prediction</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <p class="modes-switch">
+    <span class="lang-km">ចុច <span class="tag yellow">Caps Lock</span> ដើម្បីប្ដូររវាងវិធីទាំងពីរ</span>
+    <span class="lang-en">Press <span class="tag yellow">Caps Lock</span> to switch between them</span>
+  </p>
+
+  <!-- What's new in v2.0 -->
+  <h2 class="section-title"><span class="lang-km">អ្វីថ្មីក្នុង v2.0</span><span class="lang-en">What's new in v2.0</span></h2>
   <div class="card">
     <ul class="feature-list">
       <li>
-        <span class="lang-km">មិនចាំបាច់ចុច <span class="tag purple">Shift</span></span>
-        <span class="lang-en">No <span class="tag purple">Shift</span></span>
+        <span class="lang-km"><span class="tag purple">Auto</span> <strong>វាយពាក្យអង់គ្លេស ដោយមិនចាំបាច់ប្ដូរក្ដារចុច</strong> — ពាក្យអង់គ្លេសនឹងបង្ហាញក្នុងបញ្ជីពាក្យ</span>
+        <span class="lang-en"><span class="tag purple">Auto</span> <strong>Type English without switching keyboards</strong> — English words show up in the suggestion list</span>
       </li>
       <li>
-        <span class="lang-km">មិនចាំបាច់ចុច <span class="tag purple">Alt+Ctrl</span></span>
-        <span class="lang-en">No <span class="tag purple">Alt+Ctrl</span></span>
+        <span class="lang-km"><span class="tag purple">Auto</span> <strong>បញ្ចូលចន្លោះមិនឃើញដោយស្វ័យប្រវត្តិ (Auto ZWSP)</strong> — ដាក់ចន្លោះមិនឃើញរវាងពាក្យ ដើម្បីឲ្យអត្ថបទខ្មែរវែងៗ ចុះបន្ទាត់ត្រឹមត្រូវ</span>
+        <span class="lang-en"><span class="tag purple">Auto</span> <strong>Auto ZWSP</strong> — invisible spaces between words so long Khmer lines wrap neatly</span>
       </li>
       <li>
-        <span class="lang-km">មិនចាំបាច់ដាក់ជើង <span class="tag purple">្</span> — ដាក់ដោយស្វ័យប្រវត្តិ</span>
-        <span class="lang-en">No COENG sign <span class="tag purple">្</span> (ជើង) needed — added automatically</span>
+        <span class="lang-km"><span class="tag manual">Manual</span> <strong>ការទស្សន៍ទាយពាក្យ</strong> — ណែនាំពាក្យក្នុង Manual mode ផងដែរ</span>
+        <span class="lang-en"><span class="tag manual">Manual</span> <strong>Word prediction</strong> — suggestions in Manual mode too</span>
       </li>
       <li>
-        <span class="lang-km">អាចទស្សទាយពាក្យ</span>
-        <span class="lang-en">Word prediction</span>
+        <span class="lang-km">និងមុខងារដែលផ្ដល់ភាពងាយស្រួលដល់អ្នកជាច្រើនទៀត</span>
+        <span class="lang-en">And many more features that make typing easier</span>
       </li>
     </ul>
+    <p style="font-size: 12.5px; color: var(--text-light); margin-top: 8px;">
+      <span class="lang-km">ការកំណត់ (បើក/បិទមុខងារ)៖ ចុចខាងស្ដាំលើរូបតំណាង MagiKH នៅលើ Taskbar។</span>
+      <span class="lang-en">Settings (turn features on or off): right-click the MagiKH icon on the taskbar.</span>
+    </p>
   </div>
 
   <!-- Features -->
@@ -372,9 +442,24 @@
 
 </div>
 
+<!-- Optional survey: shown after every Download click (the download is never blocked) -->
+<div class="survey-overlay" id="survey" role="dialog" aria-modal="true" aria-labelledby="survey-title">
+  <div class="survey-box">
+    <h3 id="survey-title"><span class="lang-km">អរគុណដែលបានទាញយក MagiKH!</span><span class="lang-en">Thanks for downloading MagiKH!</span></h3>
+    <p>
+      <span class="lang-km">ការទាញយកកំពុងចាប់ផ្ដើម។ តើអ្នកអាចជួយឆ្លើយសំណួរខ្លីៗមួយចំនួន (ប្រហែល ១ នាទី) ដើម្បីជួយយើងកែលម្អ MagiKH បានទេ?</span>
+      <span class="lang-en">Your download is starting. Could you answer a few quick questions (about 1 minute) to help us improve MagiKH?</span>
+    </p>
+    <div class="survey-actions">
+      <button type="button" class="btn btn-ghost" id="survey-skip"><span class="lang-km">រំលង</span><span class="lang-en">Skip</span></button>
+      <a class="btn btn-primary" id="survey-go" href="#" target="_blank" rel="noopener"><span class="lang-km">ឆ្លើយសំណួរ</span><span class="lang-en">Answer</span></a>
+    </div>
+  </div>
+</div>
+
 <footer>
-  <span>MagiKH Keyboard v1.0.0 &mdash; © 2026 KY SEA. All rights reserved.</span>
-  <!--<a href="https://github.com/kysea-git/MagiKH-Keyboard/releases/tag/Khmer_Input_Method_Editor">GitHub</a>-->
+  <span>MagiKH Keyboard v2.0.0 &mdash; © 2026 KY SEA. All rights reserved.</span>
+  <!--<a href="https://github.com/kysea-git/MagiKH-Keyboard/releases/latest">GitHub</a>-->
 </footer>
 
 <script>
@@ -389,6 +474,50 @@
     var l = 'km';
     try { l = localStorage.getItem('magikh_lang') || 'km'; } catch (e) {}
     setLang(l);
+  })();
+
+  // ── Local testing: don't count real downloads ───────────────────────────
+  // When the page is opened from this computer (localhost), the Download links
+  // fetch a small generated text file instead of the GitHub release, so testing
+  // never adds to the download count.  The published site is unaffected.
+  (function () {
+    var h = location.hostname;
+    if (h !== 'localhost' && h !== '127.0.0.1') return;
+    var url = URL.createObjectURL(new Blob(
+      ['MagiKH test download - the real site downloads MagiKH_Keyboard_Setup.exe here.\r\n'],
+      { type: 'text/plain' }));
+    var links = document.querySelectorAll('a[href*="releases/latest/download"]');
+    for (var i = 0; i < links.length; i++) {
+      links[i].setAttribute('data-real-href', links[i].getAttribute('href'));
+      links[i].setAttribute('href', url);
+      links[i].setAttribute('download', 'MagiKH_test_download.txt');
+    }
+  })();
+
+  // ── Optional survey after Download ──────────────────────────────────────
+  // Paste the Google Form's share link here. While it is empty the popup never
+  // shows, so the page is safe to publish before the form exists.
+  var SURVEY_URL = 'https://forms.gle/fMWZyZH11UpkwZhy6';
+  (function () {
+    var overlay = document.getElementById('survey');
+    if (!SURVEY_URL || !overlay) return;
+    // Shown on every Download click (the user's choice); nothing is remembered.
+    function close() { overlay.classList.remove('open'); }
+    document.getElementById('survey-go').href = SURVEY_URL;
+    document.getElementById('survey-go').addEventListener('click', close);
+    document.getElementById('survey-skip').addEventListener('click', close);
+    overlay.addEventListener('click', function (e) { if (e.target === overlay) close(); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && overlay.classList.contains('open')) close();
+    });
+    // The download link works as before; the popup only appears on top of the page.
+    // (data-real-href: a download link swapped for a test file on localhost.)
+    var links = document.querySelectorAll('a[href*="releases/latest/download"], a[data-real-href]');
+    for (var i = 0; i < links.length; i++) {
+      links[i].addEventListener('click', function () {
+        setTimeout(function () { overlay.classList.add('open'); }, 400);
+      });
+    }
   })();
 </script>
 </body>
